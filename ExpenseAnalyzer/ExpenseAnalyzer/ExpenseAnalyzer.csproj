@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AppStart\ApiVersionSetup.cs" />
+    <Compile Remove="AppStart\Swagger.cs" />
+    <Compile Remove="AppStart\SwaggerOptions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EA.Repository\EA.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AppStart\" />
+  </ItemGroup>
+
+</Project>
